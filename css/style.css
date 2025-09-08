@@ -61,7 +61,31 @@ body {
 }
 
 .containing-ul {
-    background-color: brown;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & li:nth-child(1):hover {
+        & .dropdown-1 {
+            display: block;
+        }
+    }
+
+    & li:nth-child(3):hover {
+        & .dropdown-2 {
+            display: block;
+        }
+    }
+
+    & .dropdown-1 {
+        display: none;
+    }
+
+    & .dropdown-2 {
+        display: none;
+    }
 }
 
 li {
