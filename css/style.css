@@ -1,14 +1,73 @@
 
 /* Adding Root Variables */
 :root {
+    /* Ribbon */
+    --ribbon-color: #ED2939;
 
+    /* Generic Black Color (FONT) */
+    --dark-text-color: #36454F;
+
+    /* Page Background Color */
+    --page-background-color: #F0F0F0;
 }
 
 /* Global Reset */
 * {
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.raleway-font-generic-utility {
+    font-family: 'Raleway', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ribbon {
+    height: 35px;
+    width: 100%;
+    background-color: var(--ribbon-color);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 10px 0px 10px;
+}
+
+.nav-bar {
+    background-color: cyan;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+
+    & .logo {
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        border-radius: 50%;
+    }
+}
+
+.containing-ul {
+    background-color: brown;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
