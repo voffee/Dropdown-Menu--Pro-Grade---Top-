@@ -39,8 +39,17 @@ header {
 .raleway-font-generic-utility {
     font-family: 'Raleway', sans-serif;
     font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--dark-text-color);
+}
+
+.raleway-font-generic-utility-small {
+    font-family: 'Raleway', sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: var(--dark-text-color);
 }
 
 .ribbon {
@@ -94,29 +103,42 @@ header {
     }
 
     & li {
-        /* width: 200px; */
-        padding: 2px;
+        font-size: 40px;
     }
 
     & .dropdown-1 {
         display: none;
         position: absolute;
-        height: 100px;
-        background-color: gray;
+        height: 155px;
+        background-color: hotpink;
+        opacity: 0.9;
+        border-radius: 10px;
     }
 
     & .dropdown-2 {
         display: none;
         position: absolute;
         height: 100px;
-        background-color: gray;
+        background-color: hotpink;
+        opacity: 0.9;
+        border-radius: 10px;
+        box-shadow: inset 1px 1px 1px 1px blue;
+
+        & li a {
+            color: #ED2939;
+        }
     }
 }
 
 li {
     list-style: none;
+    margin: 0px 30px 0px 30px;
 }
 
 a {
     text-decoration: none;
+}
+
+a:visited {
+    color: var(--dark-text-color);
 }
