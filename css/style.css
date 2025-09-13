@@ -11,10 +11,19 @@
     --page-background-color: #F0F0F0;
 
     /* Nav Linear Gradient Colors */
-    --nav-color-1: #01AEBC;
-    --nav-color-2: #64BFB6;
-    --nav-color-3: #A3CAB9;
-    --nav-color-4: #F5DBC0;
+    --nav-color-1: #F3FCE1;
+    --nav-color-2: #BDF7EF;
+    --nav-color-3: #B9DCF2;
+    --nav-color-4: #D6C8EE;
+    --nav-color-5: #F8C6DB;
+
+    /* Dropdown Menu Color */
+    --dropdown-color-1: #D37EEA;
+    --dropdown-color-2: #FF69B4;
+    --dropdown-color-3: #FF6A79;
+
+    /* Dropdown Menu Font Color */
+    --dropdown-text-color: #69FFB4;
 }
 
 /* Global Reset */
@@ -29,6 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; */
+    background-color: var(--page-background-color);
 }
 
 header {
@@ -67,11 +77,12 @@ header {
 }
 
 .nav-bar {
-    background-image: linear-gradient(180deg, var(--nav-color-1), var(--nav-color-2), var(--nav-color-3), var(--nav-color-4));
+    background-image: linear-gradient(180deg, var(--nav-color-1), var(--nav-color-2), var(--nav-color-3), var(--nav-color-4), var(--nav-color-5));
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
+    margin-bottom: 10px;
 
     & .logo {
         height: 100px;
@@ -110,22 +121,49 @@ header {
         display: none;
         position: absolute;
         height: 155px;
-        background-color: hotpink;
+        background-image: linear-gradient(225deg, var(--dropdown-color-1), var(--dropdown-color-2), var(--dropdown-color-3));
         opacity: 0.9;
         border-radius: 10px;
+
+        & li {
+            border-bottom: 3px solid var(--dark-text-color);
+        }
+
+        & li a {
+            /* color: var(--dropdown-text-color); */
+            color: var(--dark-text-color);
+            font-size: 32px;
+        }
+
+        & li a:hover {
+            /* color: var(--dropdown-text-color); */
+            box-shadow: inset 0px -32px 0px 0px var(--dropdown-text-color);
+            transition: 0.9s;
+        }
     }
 
     & .dropdown-2 {
         display: none;
         position: absolute;
         height: 100px;
-        background-color: hotpink;
+        background-image: linear-gradient(225deg, var(--dropdown-color-1), var(--dropdown-color-2), var(--dropdown-color-3));
         opacity: 0.9;
         border-radius: 10px;
-        box-shadow: inset 1px 1px 1px 1px blue;
+
+        & li {
+            border-bottom: 3px solid var(--dark-text-color);
+        }
 
         & li a {
-            color: #ED2939;
+            /* color: var(--dropdown-text-color); */
+            color: var(--dark-text-color);
+            font-size: 32px;
+        }
+
+        & li a:hover {
+            /* color: var(--dropdown-text-color); */
+            box-shadow: inset 0px -32px 0px 0px var(--dropdown-text-color);
+            transition: 0.9s;
         }
     }
 }
